@@ -1,0 +1,18 @@
+# Stage UI files
+git add ManagerDashboard.xaml
+git add ManagerDashboard.xaml.cs
+
+# Commit with descriptive message
+git commit -m "feat: Enhance Manager Dashboard with modern UI
+
+- Implement glassmorphism design with gradient backgrounds
+- Add professional activity feed with animated cards
+- Enhance statistics display with visual indicators
+- Improve ComboBox styling with dropdown animations
+- Add quick action buttons for bulk operations
+- Implement responsive layout with proper spacing
+- Add status bar with real-time updates
+- Include hover effects and smooth transitions"
+
+# Push to GitHub
+git push origin main
