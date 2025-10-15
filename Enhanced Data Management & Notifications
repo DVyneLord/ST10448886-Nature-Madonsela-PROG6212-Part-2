@@ -1,0 +1,17 @@
+# Stage data management files
+git add DataManager.cs
+git add DataManagerTests.cs
+
+# Commit with descriptive message
+git commit -m "feat: Enhance data management with notification system
+
+- Extend DataManager with notification functionality
+- Implement NotificationData model for tracking user notifications
+- Add methods for creating, reading, and managing notifications
+- Implement rejection notification system for claim feedback
+- Add bulk operations for claims (update, delete)
+- Include comprehensive unit tests for all operations
+- Improve JSON serialization and data persistence"
+
+# Push to GitHub
+git push origin main
