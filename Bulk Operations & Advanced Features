@@ -1,0 +1,17 @@
+# Stage related implementation files
+git add ManagerDashboard.xaml.cs
+
+# Commit with descriptive message
+git commit -m "feat: Implement bulk operations and advanced manager features
+
+- Add bulk approve functionality for multiple claims
+- Implement bulk reject with reason dialog
+- Add bulk delete with confirmation safeguards
+- Implement export to CSV functionality
+- Add lecturer overview screen
+- Include system settings panel
+- Implement search and filter capabilities
+- Add real-time statistics updates"
+
+# Push to GitHub
+git push origin main
