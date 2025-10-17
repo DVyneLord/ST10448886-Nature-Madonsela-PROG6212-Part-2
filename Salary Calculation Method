@@ -1,0 +1,13 @@
+private void CalculateTotal()
+{
+    if (decimal.TryParse(txtHours.Text, out decimal hours) &&
+        decimal.TryParse(txtHourlyRate.Text, out decimal rate))
+    {
+        var total = hours * rate;
+        txtTotalAmount.Text = $"R {total:N2}";
+    }
+    else
+    {
+        txtTotalAmount.Text = "R 0.00";
+    }
+}
