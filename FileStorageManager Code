@@ -1,0 +1,36 @@
+public static class FileStorageManager
+{
+    private static readonly string baseStorageDirectory = "ClaimDocuments";
+    private static readonly long maxFileSize = 52428800; // 50 MB
+    private static readonly long maxImageSize = 10485760; // 10 MB
+    
+    private static readonly string[] allowedDocumentExtensions = 
+        { ".pdf", ".doc", ".docx", ".xls", ".xlsx", ".ppt", ".pptx" };
+    private static readonly string[] allowedImageExtensions = 
+        { ".jpg", ".jpeg", ".png", ".gif", ".bmp" };
+    
+    public static string SaveFile (string sourceFilePath, string claimId)
+    {
+        try
+        {
+            ValidateFile(sourceFilePath);
+            
+            string claimDirectory = Path.Combine(baseStorageDirectory, claimId);
+            if (!Directory.Exists(claimDirectory))
+            {
+                Directory.CreateDirectory(claimDirectory);
+            }
+            
+            string uniqueFileName = GenerateUniqueFileName(sourceFilePath);
+            string destinationPath = Path.Combine(claimDirectory, uniqueFileName);
+            
+            File.Copy(sourceFilePath, destinationPath, true);
+            RegisterFile(new FileRegistryEntry { ... });
+            
+            return destinationPath;
+        }
+        catch (Exception ex)
+        {
+            throw new Exception($"Error saving file: {ex.Message}");
+        }
+    }
