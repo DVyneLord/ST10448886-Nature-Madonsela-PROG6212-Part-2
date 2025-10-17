@@ -1,0 +1,11 @@
+public class NotificationData
+{
+    public string NotificationId { get; set; }
+    public string RecipientEmail { get; set; }
+    public string Title { get; set; }
+    public string Message { get; set; }
+    public DateTime CreatedDate { get; set; }
+    public bool IsRead { get; set; } = false;
+    public string Type { get; set; } // "Rejection", "Approval", "General"
+    public string RelatedClaimId { get; set; }
+}
